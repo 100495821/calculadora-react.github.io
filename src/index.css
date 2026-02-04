@@ -1,0 +1,80 @@
+:root {
+  --bg: #f3f4f6;
+  --panel: #ffffff;
+  --accent: #2563eb;
+  --text: #111827;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator-root {
+  width: 360px;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.calculator {
+  background: var(--panel);
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  padding: 16px;
+}
+
+.display {
+  background: #0f172a;
+  color: #f8fafc;
+  font-size: 32px;
+  text-align: right;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  min-height: 56px;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.btn {
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background: #e6e9ef;
+  cursor: pointer;
+  transition: transform .06s ease;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-eq {
+  background: var(--accent);
+  color: white;
+  grid-column: span 1;
+}
+
+.btn-ac {
+  background: #ef4444;
+  color: white;
+  grid-column: span 4;
+}
+
+.footer {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 10px;
+  text-align: center;
+}
